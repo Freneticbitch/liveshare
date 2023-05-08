@@ -1,8 +1,8 @@
 FROM debian:buster
 
-RUN apt update  -qq -y && \
-	apt upgrade -qq -y && \
-	apt install -qq -y nginx openssl
+RUN apt update -y -qq &&\
+	apt upgrade -y -qq &&\
+	apt install -y -qq nginx openssl
 
 COPY conf/alemafe.42Roma.conf /etc/nginx/sites-enabled/
 

@@ -11,6 +11,15 @@ docker volume rm srcs_alemafe_nginx
 docker volume rm srcs_db
 docker volume rm srcs_php_nginx
 rm -rf /home/$USER/data/
-docker volume list
-docker container list
-docker image list
+docker volume list | grep srcs
+if [ $? ]; then
+echo "Checking docker volumes:\e[1;32m OK \e[0m"
+fi
+docker container list | grep srcs
+if [ $? ]; then
+echo "Checking docker containers:\e[1;32m OK \e[0m"
+fi
+docker image list | grep srcs
+if [ $? ]; then
+echo "Checking docker images:\e[1;32m OK \e[0m"
+fi
