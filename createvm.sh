@@ -15,7 +15,7 @@ else
     exit 1
 fi
 echo -e "${BLUE}Adding CPU, RAM, and VRAM...${RESET}"
-VBoxManage modifyvm Inception-Xubuntu --cpus 8 --memory 8192 --vram 256
+VBoxManage modifyvm Inception-Xubuntu --cpus 6 --memory 8192 --vram 128
 if [ $? ]; then
     echo -e "${GREEN}CPU, RAM, and VRAM added successfully!${RESET}"
 else
@@ -87,10 +87,10 @@ else
     exit 1
 fi
 echo -e "${BLUE}Starting VM...${RESET}"
-VBoxManage startvm Inception-Xubuntu
-if [ $? ]; then
-    echo -e "${GREEN}VM started successfully!${RESET}"
-else
-    echo -e "${RED}VM start failed!${RESET}"
-    exit 1
-fi
+# VBoxManage startvm Inception-Xubuntu
+# if [ $? ]; then
+#     echo -e "${GREEN}VM started successfully!${RESET}"
+# else
+#     echo -e "${RED}VM start failed!${RESET}"
+#     exit 1
+# fi

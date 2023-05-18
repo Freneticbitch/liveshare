@@ -16,8 +16,6 @@ if ! wp user get AleMarcoFede --allow-root; then
 	wp user create AleMarcoFede AleMarcoFede@gucci.fr --role=author --user_pass="123" --allow-root
 fi
 
-# mv /var/www/object-cache.php /var/www/html/wordpress/wp-content/
-
 wp plugin install redis-cache --allow-root
 wp plugin activate redis-cache --allow-root
 wp redis enable --force --allow-root
