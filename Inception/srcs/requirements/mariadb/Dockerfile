@@ -10,6 +10,8 @@ COPY conf/my.cnf /etc/mysql
 
 COPY conf/script.sh /tmp/mariadb/
 
+EXPOSE 3306
+
 ENTRYPOINT ["sh", "/tmp/mariadb/script.sh"]
 
 CMD ["mysqld_safe"]
