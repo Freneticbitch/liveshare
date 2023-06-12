@@ -7,7 +7,7 @@ Warlock::Warlock(const std::string &name, const std::string &title){
 }
 
 Warlock::~Warlock(){
-	std::cout << this->name << ": My job here is done!\n";
+	std::cout << this->name << ": My job here is done\n";
 }
 
 const std::string &Warlock::getName() const {return this->name;}

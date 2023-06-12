@@ -4,6 +4,7 @@
 #include <map>
 #include "ASpell.hpp"
 #include "ATarget.hpp"
+
 class Warlock {
 	private:
 		std::map<std::string, ASpell *> arr;
@@ -25,6 +26,6 @@ class Warlock {
 		void introduce() const;
 
 		void learnSpell(ASpell *spell_ptr);
-		void forgetSpell(const std::string &name);
+		void forgetSpell(std::string name);
 		void launchSpell(std::string name, ATarget const &atarget_ref);
 };
